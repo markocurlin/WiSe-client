@@ -14,9 +14,13 @@ const HomePage = () => {
     );
 
     useEffect(() => {
+        axios.post('/', {"mirko"}).then(res => {
+            console.log(res.data);
+        })
+        /*
         axios.get('/marko').then(res => {
             console.log(res.data);
-        });
+        });*/
     }, []);
 
     return (
