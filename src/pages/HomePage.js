@@ -14,9 +14,12 @@ const HomePage = () => {
     );
 
     useEffect(() => {
-        axios.get('/').then(res => {
+        axios.get('https://heroku-server-wise.herokuapp.com/').then(res => {
             console.log(res.data);
         });
+        /*axios.get('/').then(res => {
+            console.log(res.data);
+        });*/
     }, []);
 
     return (
