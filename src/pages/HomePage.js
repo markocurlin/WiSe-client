@@ -14,7 +14,7 @@ const HomePage = () => {
     );
 
     useEffect(() => {
-        axios.get('/marko').then(res => {
+        axios.get('/').then(res => {
             console.log(res.data);
         });
     }, []);
