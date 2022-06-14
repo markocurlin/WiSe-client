@@ -15,25 +15,10 @@ const HomePage = () => {
 
     useEffect(() => {
 
-        let ws = new WebSocket('https://eu1.cloud.thethings.network/api/v3/as/applications/pametni-vrt/webhooks/test/devices/eui-70b3d57ed0051d54/down/push')
-
-        ws.onopen = () => {
-            console.log('connected')
-        }
-
-        ws.onmessage = evt => {
-            const message = JSON.parse(evt.data)
-            console.log(message)
-        }
-        
-        ws.onclose = () => {
-            console.log('disconnected')
-        }
-
-        /*axios.get('https://eu1.cloud.thethings.network/api/v3/as/applications/pametni-vrt/webhooks/test/devices/eui-70b3d57ed0051d54/down/push').then(res => {
+        axios.get('https://eu1.cloud.thethings.network/api/v3/as/applications/pametni-vrt/webhooks/test/devices/eui-70b3d57ed0051d54/down/push').then(res => {
             console.log(res.data);
         });
-        
+        /*
         axios.get('https://heroku-server-wise.herokuapp.com/').then(res => {
             console.log(res.data);
         });
