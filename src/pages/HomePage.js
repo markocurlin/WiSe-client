@@ -15,7 +15,7 @@ const HomePage = () => {
 
     useEffect(() => {
 
-        ws = new WebSocket('https://eu1.cloud.thethings.network/api/v3/as/applications/pametni-vrt/webhooks/test/devices/eui-70b3d57ed0051d54/down/push')
+        let ws = new WebSocket('https://eu1.cloud.thethings.network/api/v3/as/applications/pametni-vrt/webhooks/test/devices/eui-70b3d57ed0051d54/down/push')
 
         ws.onopen = () => {
             console.log('connected')
