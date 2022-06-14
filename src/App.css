@@ -60,6 +60,11 @@
   background: linear-gradient(to right bottom, #d4fc79,  #96e6a1 120%);
 }
 
+.bar-chart {
+  width: 1000px;
+  height: 1000px;
+}
+
 @media screen and (max-width: 800px) {
   .background {
     width: 100vw;
