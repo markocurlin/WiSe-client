@@ -18,14 +18,16 @@ const HomePage = () => {
         axios.get('https://heroku-server-wise.herokuapp.com/').then(res => {
             let str = res.data.trim();
             let data = str.split(' ');
-            setParams(
-                {
-                    temperature: `${data[0]} °C`,
-                    humidityAir: `${data[1]} %`,
-                    lux: `${data[2]} %`,
-                    humiditySoil: `${data[3]} %`
-                }
-            )
+            if (str !== '') {
+                setParams(
+                    {
+                        temperature: `${data[0]} °C`,
+                        humidityAir: `${data[1]} %`,
+                        lux: `${data[2]} %`,
+                        humiditySoil: `${data[3]} %`
+                    }
+                )
+            }
         });
     });
 
