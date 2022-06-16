@@ -16,10 +16,8 @@ const HomePage = () => {
 
     useEffect(() => {
         axios.get('https://heroku-server-wise.herokuapp.com/').then(res => {
-            console.log(res.data);
             let str = res.data.trim();
             let data = str.split(' ');
-            console.log(data);
             setParams(
                 {
                     temperature: `${data[0]} °C`,
