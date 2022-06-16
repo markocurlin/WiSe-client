@@ -41,6 +41,7 @@
 
 .card .params{
   font-size: 4em;
+  text-align: center;
 }
 
 .card:hover {
