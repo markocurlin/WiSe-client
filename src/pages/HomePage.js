@@ -14,7 +14,7 @@ const HomePage = () => {
     );
 
     useEffect(() => {
-        axios.get('https://heroku-server-wise.herokuapp.com/').then(res => {
+        axios.get('https://heroku-server-wise.herokuapp.com/mqtt').then(res => {
             console.log(res.data);
         });/*
         /*axios.get('/').then(res => {
