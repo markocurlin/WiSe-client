@@ -7,7 +7,6 @@ const Card = ({ title, route, params }) => {
                 {typeof params === 'undefined' ? 
                     <div>
                         <p className='title'>Coming soon</p>
-                        {/*<button>Kreni</button>*/}
                         <p className='params'>...</p>
                     </div> : 
                     <div>
