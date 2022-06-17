@@ -32,24 +32,27 @@ export const options = {
     },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const BarChart = (params) => {
+  const dataArray = params.data;
+  
+  const labels = dataArray.map((p, index) => {
+    return index + 1;
+  })
 
-const BarChart = ( params ) => {
-    
-    const data = {
-        labels,
-        datasets: [
-          {
-            label: 'Dataset 1',
-            data: labels.map((p, index) => params.data[index]),
-            backgroundColor: 'rgb(0, 191, 255)',
-          },
-        ],
-      };
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: `${params.title}`,
+        data: labels.map((p, index) => dataArray[index].paramname),
+        backgroundColor: 'rgb(0, 191, 255)',
+      },
+    ],
+  };
 
-    return (
-        <Bar options={options} data={data} />
-    )
+  return (
+    <Bar options={options} data={data}/>
+  );
 }
 
 export default BarChart;

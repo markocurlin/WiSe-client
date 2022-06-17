@@ -66,6 +66,12 @@
   height: 1000px;
 }
 
+.bar-chart-title {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 @media screen and (max-width: 800px) {
   .background {
     width: 100vw;

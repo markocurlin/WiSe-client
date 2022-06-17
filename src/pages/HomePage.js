@@ -16,9 +16,8 @@ const HomePage = () => {
 
     useEffect(() => {
         axios.get('https://heroku-server-wise.herokuapp.com/').then(res => {
-            let str = res.data.trim();
-            let data = str.split(' ');
-            if (str !== '') {
+            let data = res.data;
+            if (data.length !== 0) {
                 setParams(
                     {
                         temperature: `${data[0]} °C`,
@@ -30,7 +29,6 @@ const HomePage = () => {
             }
         });
     });
-
 
     return (
         <div className='background'>
@@ -48,4 +46,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default HomePage;
