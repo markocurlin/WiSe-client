@@ -1,5 +1,4 @@
 .background {
-  /*background-image: url(/src/content/background.png);*/
   background-image: linear-gradient(to right bottom, #d4fc79,  #96e6a1 120%);
   background-position: center;
   background-size: cover;
@@ -8,7 +7,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /*overflow-y: hidden;*/
 }
 
 .container {
@@ -73,12 +71,9 @@
 }
 
 @media screen and (max-width: 800px) {
-  .background {
-    width: 100vw;
-  }
-  
   .container {
     flex-direction: column;
     align-items: center;
+    margin-top: 38em;
   }
 }

@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
 import Card from '../components/Card';
-//import background from './content/background.png'
 
 const HomePage = () => {
     const [params, setParams] = useState(
@@ -17,7 +15,7 @@ const HomePage = () => {
     useEffect(() => {
         axios.get('https://heroku-server-wise.herokuapp.com/').then(res => {
             let data = res.data;
-            if (data.length !== 0) {
+            if (data.length !== 1) {
                 setParams(
                     {
                         temperature: `${data[0]} °C`,
@@ -27,7 +25,7 @@ const HomePage = () => {
                     }
                 )
             }
-        });
+        })
     });
 
     return (
